@@ -1,0 +1,14 @@
+BIBLIOTECA CIENTÍFICA DO LABEPI — PACOTE PÚBLICO (SOMENTE LEITURA)
+
+1. Publique SOMENTE os arquivos desta pasta no repositório GitHub Pages.
+2. Abra index.html no navegador para pré-visualizar.
+3. No GitHub: repositório > Settings > Pages > Deploy from a branch > main > /(root) > Save.
+4. A URL será https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+5. No WordPress da UFSC: Aparência > Menus > Links personalizados > URL da biblioteca. Salve o menu.
+6. Para atualizar projetos/vínculos/ocultações/cadastros, use APENAS o Editor privado. Clique em Baixar curadoria.js e substitua curadoria.js neste repositório no GitHub.
+7. Para novas importações em grande volume, substitua dados.js gerado pela rotina de extração após validação bibliográfica. Preserve IDs dos registros para manter a curadoria.
+
+ATENÇÃO: este pacote NÃO contém formulários administrativos ou painel de edição.
+O site é público e não requer login; acesso para modificar arquivos publicados deve ser restrito aos responsáveis pelo repositório no GitHub.
+Não inclua backups privados no repositório público.
+A produção Lattes ainda não foi integralmente validada por OpenAlex/Crossref.

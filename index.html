@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#144e50" name="theme-color"/>
+<meta content="Biblioteca de produções científicas e projetos de pesquisa e extensão do Laboratório de Pesquisa em Epidemiologia — UFSC." name="description"/>
+<title>Biblioteca Científica · LabEpi / UFSC</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="dados.js"></script>
+<script defer="" src="curadoria.js"></script>
+<script defer="" src="app-public.js"></script>
+</head>
+<body>
+<div class="topline"></div>
+<header class="site-header">
+<div class="wrap header-content">
+<a class="brand" href="#inicio" id="homeBrand"><img alt="Logotipo LabEpi" src="logo-labepi.png"/><span><strong>LabEpi <b>/ Biblioteca</b></strong><small>Laboratório de Pesquisa em Epidemiologia · UFSC</small></span></a>
+<nav aria-label="Navegação principal" class="nav"><button class="navbtn active" data-tab="producoes" type="button">Produções</button><button class="navbtn" data-tab="projetos" type="button">Projetos</button><button class="navbtn" data-tab="pesquisadores" type="button">Pesquisadores</button><button class="navbtn" data-tab="sobre" type="button">Sobre</button></nav>
+<a class="site-link" href="https://labepi.ufsc.br/" rel="noopener noreferrer" target="_blank">Site do LabEpi <span aria-hidden="true">↗</span></a>
+</div>
+</header>
+<main class="wrap" id="inicio">
+<section aria-labelledby="intro-title" class="intro">
+<div class="intro-main"><div class="micro-label"><span class="micro-dot"></span> ACERVO ACADÊMICO · UFSC</div><h1 id="intro-title">Produção científica, <em>conectada aos projetos.</em></h1><p>Consulte artigos, resumos em eventos, capítulos de livros e outras produções dos integrantes do LabEpi. Encontre publicações por projeto, autor, tipo ou ano e exporte relatórios.</p></div>
+<div class="intro-side"><span>ACERVO PRELIMINAR</span><div><strong id="statWorks">—</strong><small>produções agrupadas</small></div><div class="minor-stats"><span><b id="statMembers">19</b> pesquisadores</span><span><b id="statProjects">17</b> projetos</span></div></div>
+</section>
+<div class="data-notice"><span aria-hidden="true">ⓘ</span> <span><strong>Base em curadoria.</strong> Agrupamento preliminar dos registros Lattes; os vínculos com os projetos devem ser validados. Os metadados ainda não passaram por conferência sistemática com OpenAlex e Crossref.</span><button data-tab="sobre" type="button">Saiba mais →</button></div>
+<section class="screen" id="screen-producoes">
+<div class="page-heading"><div><div class="eyebrow">BIBLIOTECA CIENTÍFICA</div><h2>Produções acadêmicas</h2><p>Explore o acervo por tema, pesquisador, tipo de produção ou projeto.</p></div></div>
+<div class="search-strip"><label class="search-box" for="search"><svg aria-hidden="true" fill="none" height="21" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="21"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input autocomplete="off" id="search" placeholder="Buscar por título, autor, assunto, palavra-chave ou projeto..." type="search"/><kbd>/</kbd></label><button class="clear-btn" id="resetAll" type="button">Limpar filtros</button></div>
+<div class="workspace">
+<aside class="filters" id="filters">
+<div class="filter-head"><h3>Filtrar resultados</h3><button class="mobile-only text-btn" id="mobileCloseFilter" type="button">Fechar ×</button></div>
+<div class="filter-section"><div class="filter-title"><label for="personSearch">Pesquisadores</label><span class="pill-counter" id="personSelected">Todos</span></div><input class="field" id="personSearch" placeholder="Buscar integrante..." type="search"/><div class="person-checks" id="personChecks"></div><div class="check-actions"><button id="clearPeople" type="button">Desmarcar</button><button id="selectAllPeople" type="button">Selecionar todos</button></div><div class="mode-switch"><button aria-pressed="true" class="active" data-mode="union" type="button">Qualquer um (OU)</button><button aria-pressed="false" data-mode="intersection" type="button">Em comum (E)</button></div><p class="filter-help">“Em comum” exige a presença de todos os integrantes selecionados na mesma produção agrupada.</p></div>
+<div class="filter-section"><label for="typeFilter">Tipo de produção</label><select class="field" id="typeFilter"><option value="">Todos os tipos</option></select></div>
+<div class="filter-section"><label for="yearFilter">Ano</label><select class="field" id="yearFilter"><option value="">Todos os anos</option></select></div>
+<div class="filter-section"><label for="projectFilter">Projeto vinculado</label><select class="field" id="projectFilter"><option value="">Todos os projetos</option><option value="__unlinked">Sem projeto vinculado</option></select><p class="filter-help">Vínculos cadastrados ou revisados pela equipe. Não são inferidos por assunto.</p></div>
+<div class="filter-section"><label for="bondFilter">Vínculo institucional</label><select class="field" id="bondFilter"><option value="">Todas as situações</option><option value="Não avaliado">Não avaliado</option><option value="Confirmado">Confirmado</option><option value="Em revisão">Em revisão</option><option value="Não vinculado">Não vinculado</option></select></div>
+</aside>
+<div class="main-results"><div class="results-top"><div><span class="eyebrow">RESULTADOS</span><h3><span id="resultCount">—</span> <span id="resultNoun">produções encontradas</span></h3><p id="resultHint">Resultados agrupados provisoriamente.</p></div><div class="results-controls"><button class="btn btn-light mobile-only" id="mobileOpenFilter" type="button">Filtros</button><label for="sortFilter">Ordenar <select id="sortFilter"><option value="recent">Mais recentes</option><option value="old">Mais antigos</option><option value="title">Título A–Z</option><option value="type">Tipo A–Z</option></select></label><div class="view-buttons"><button aria-label="Visualização em cards" aria-pressed="true" class="active" id="gridMode" title="Visualização em cards" type="button">▦</button><button aria-label="Visualização em lista" aria-pressed="false" id="listMode" title="Visualização em lista" type="button">☰</button></div></div></div>
+<div class="active-filters" id="activeFilters"></div>
+<div aria-live="polite" class="work-cards" id="workCards"></div>
+<div class="load-more"><p id="shownCount"></p><button class="btn btn-light" id="loadMore" type="button">Mostrar mais produções ↓</button></div>
+<section class="export-bar"><div aria-hidden="true" class="export-icon">⇩</div><div><strong>Relatórios de produção científica</strong><p>Exporte os registros filtrados ou gere um relatório consolidado por projeto, ano, tipo e pesquisador.</p></div><div class="export-actions"><button class="btn btn-light" id="csvExport" type="button">Exportar CSV</button><button class="btn btn-dark" id="reportOpen" type="button">Gerar relatório ↗</button></div></section>
+</div>
+</div>
+</section>
+<section class="screen hidden" id="screen-projetos"><div class="page-heading"><div><div class="eyebrow">PESQUISA E EXTENSÃO</div><h2>Projetos do LabEpi</h2><p>Consulte as produções vinculadas a cada projeto de pesquisa ou extensão.</p></div></div><div class="project-nav"><button class="project-tab active" data-project-type="" type="button">Todos <span id="projectsAll">17</span></button><button class="project-tab" data-project-type="Pesquisa" type="button">Pesquisa <span id="projectsResearch">11</span></button><button class="project-tab" data-project-type="Extensão" type="button">Extensão <span id="projectsExtension">6</span></button></div><div class="project-grid" id="projectCards"></div></section>
+<section class="screen hidden" id="screen-pesquisadores"><div class="page-heading"><div><div class="eyebrow">EQUIPE</div><h2>Pesquisadores</h2><p>Visualize a produção identificada para os integrantes do laboratório.</p></div></div><div class="member-grid" id="memberCards"></div></section>
+<section class="screen hidden" id="screen-sobre"><div class="page-heading"><div><div class="eyebrow">ORGANIZAÇÃO DA BIBLIOTECA</div><h2>Sobre o acervo</h2><p>Fontes, curadoria e evolução do repositório.</p></div></div><div class="about-grid"><div class="about-card"><h3>O que esta versão reúne</h3><p>Artigos de periódicos, resumos em anais, resumos expandidos, trabalhos em eventos, capítulos de livros e livros declarados nos currículos Lattes dos integrantes. TCCs, dissertações, teses e relatórios podem ser acrescentados posteriormente.</p><p><strong>Atenção:</strong> as contagens referem-se a grupos construídos automaticamente por tipo, título e ano; ainda é necessária verificação bibliográfica.</p></div><div class="about-card"><h3>Projetos e relatórios</h3><p>Os projetos de pesquisa e extensão informados estão cadastrados. Cada produção pode ser associada manualmente a um ou mais projetos. Os relatórios podem ser filtrados por projeto, ano, categoria e pesquisador, sem contar repetidamente uma mesma produção no total geral.</p><p>Uma publicação que contribui para dois projetos aparecerá no relatório de ambos. Por isso, a soma das contagens por projeto pode superar a quantidade total de produções únicas.</p></div><div class="about-card"><h3>Consulta e relatórios</h3><p>O acervo público é apenas para consulta. Você pode pesquisar e filtrar produções, acessar os trabalhos e baixar relatórios e planilhas. Os registros e vínculos de projetos são mantidos pela curadoria do laboratório.</p></div><div class="about-card"><h3>Fontes e atribuição</h3><p>A extração inicial utiliza currículos Lattes em PDF. Os perfis ORCID/OpenAlex identificados constam no diretório. Integrações de validação por OpenAlex/Crossref ainda não estão implementadas. A autoria de um integrante não demonstra, por si só, que a produção é institucional do LabEpi ou pertence a determinado projeto.</p><a href="https://labepi.ufsc.br/" rel="noopener noreferrer" target="_blank">Site institucional do LabEpi ↗</a></div></div></section>
+</main>
+<footer class="wrap footer"><span>LabEpi · Universidade Federal de Santa Catarina</span><span>Biblioteca Científica · Consulta pública · 2026</span></footer>
+<dialog class="dialog" id="detailsDialog"><div class="dialog-head"><span class="eyebrow">DETALHES DA PRODUÇÃO</span><button aria-label="Fechar" class="dialog-close" data-close="detailsDialog" type="button">×</button></div><div id="detailsBody"></div></dialog>
+
+
+
+<dialog class="dialog report-dialog" id="reportDialog"><div class="dialog-head"><div><span class="eyebrow">RELATÓRIO INSTITUCIONAL</span><h2>Relatório de produções</h2></div><button aria-label="Fechar" class="dialog-close" data-close="reportDialog" type="button">×</button></div><p class="muted">O relatório considera exatamente os filtros aplicados à biblioteca. Para um relatório específico, selecione um projeto no filtro “Projeto vinculado” ou na página Projetos.</p><div id="reportPreview"></div><div class="dialog-actions"><button class="btn btn-light" id="downloadReport" type="button">Baixar relatório HTML</button><button class="btn btn-light" id="reportCsv" type="button">Exportar CSV</button><button class="btn btn-dark" id="printReport" type="button">Abrir / salvar PDF ↗</button></div></dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+</body>
+</html>
